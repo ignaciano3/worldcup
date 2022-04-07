@@ -10,11 +10,25 @@
   <body>
     <h1>This is the World Cup Bet</h1>
     <p>
-      Welcome to the World Cup Bet, the place you can choose which country is more probably being the world cup champion in Qatar 2022. 
+      Welcome to the <i>World Cup Bet</i>, the place you can choose which country is more probably being the world cup champion in Qatar 2022. 
       If you choose correctly you can win up to <b>4x</b> your initial investment. 
       We rely on a smart contract using Ethereum that provides descentralization and guarantee of results.
     </p>
-    First select the country id
+    <h2>Total Value Locked: $137,365</h2><br><br>
+
+    <input type="search" id="searchCountry" placeholder="France"><br>
+    <img src="./images/brazil.png">
+
+    <div class="addParticipant">
+      <label for="countryId">Select the country id:</label>
+      <input type="number" id="countryId" name="countryId" min="0" max="32"><br>
+      <label for="value">Select the amount to invest in ETH (greater than 0.003 ETH):</label>
+      <input type="number" id="value" name="value" min = "0.003" step="0.001"><br>
+    <input type="submit">
+    </div>
+    
+    <br><hr>
+    We are no related to FIFA or any World Cup organizer. Betting involves risk that may inccur in lossing the total amount invested.
 
   </body>
 
