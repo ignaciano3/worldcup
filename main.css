@@ -2,12 +2,12 @@
 body {
   background : #e2e2e2;
   color: #4e4e4e;
-  font-family: verdana;
+  font-family: courier;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 h1 {
   text-align: center;
-  font-family: courier;
+  font-family: verdana;
 }

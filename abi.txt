@@ -2,28 +2,14 @@
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "countryId",
-				"type": "uint256"
-			}
-		],
-		"name": "addParticipant",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes32[]",
+				"internalType": "bytes12[]",
 				"name": "_countries",
-				"type": "bytes32[]"
+				"type": "bytes12[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "_rewards",
+				"type": "uint256[]"
 			}
 		],
 		"stateMutability": "nonpayable",
@@ -90,8 +76,27 @@
 		"type": "event"
 	},
 	{
-		"inputs": [],
-		"name": "removeParticipant",
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "participantId",
+				"type": "uint256"
+			}
+		],
+		"name": "addMoreFundsParticipant",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "countryId",
+				"type": "uint256"
+			}
+		],
+		"name": "addParticipant",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -106,13 +111,18 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "participantId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
 				"name": "countryId",
 				"type": "uint256"
 			}
 		],
-		"name": "winner",
+		"name": "changeCountryParticipant",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -139,9 +149,9 @@
 		"name": "countryIdToCountry",
 		"outputs": [
 			{
-				"internalType": "bytes32",
+				"internalType": "bytes12",
 				"name": "name",
-				"type": "bytes32"
+				"type": "bytes12"
 			},
 			{
 				"internalType": "uint256",
@@ -151,6 +161,25 @@
 			{
 				"internalType": "uint256",
 				"name": "valueLocked",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "countryIdtoReward",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
 				"type": "uint256"
 			}
 		],
@@ -218,8 +247,46 @@
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "participantId",
+				"type": "uint256"
+			}
+		],
+		"name": "removeParticipant",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
-		"name": "raised",
+		"name": "totalValueLocked",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "walletToId",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -238,15 +305,9 @@
 				"type": "uint256"
 			}
 		],
-		"name": "rewardForCountry",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
+		"name": "winner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
